@@ -1,7 +1,7 @@
 <template>
   <div>
-    <!-- ========== HEADER ========== -->
-    <HeadPage />
+   <!-- ========== HEADER ========== -->
+   <HeadPage />
     <!-- ========== END HEADER ========== -->
 
     <!-- ========== MAIN CONTENT ========== -->
@@ -43,18 +43,20 @@
     <!-- Sidebar -->
     <SidebarPage />
     <!-- End Sidebar -->
-
     <!-- Content -->
     <div class="w-full lg:ps-64">
       <div class="p-4 sm:p-6 space-y-4 sm:space-y-6">
-        <RouterView />
+        <RouterView :key="$route.fullPath" />
       </div>
     </div>
-    <!-- End Content -->
-    <!-- ========== END MAIN CONTENT ========== -->
   </div>
 </template>
+
 <script setup>
-import HeadPage from './components/HeadPage.vue';
-import SidebarPage from './components/SidebarPage.vue';
+  import HeadPage from '../components/HeadPage.vue';
+  import SidebarPage from '../components/SidebarPage.vue';
 </script>
+
+<style lang="scss" scoped>
+
+</style>

@@ -13,6 +13,7 @@
     "@heroicons/vue": "^2.1.5",
     "@preline/overlay": "^2.3.0",
     "@tailwindcss/container-queries": "^0.1.1",
+    "axios": "^1.7.2",
     "heroicons": "^2.1.5",
     "preline": "^2.3.0",
     "vue": "^3.4.31",

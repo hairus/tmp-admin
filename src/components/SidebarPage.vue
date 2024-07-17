@@ -34,7 +34,7 @@
       <nav class="hs-accordion-group p-6 w-full flex flex-col flex-wrap" data-hs-accordion-always-open>
         <ul class="space-y-1.5">
           <li>
-            <RouterLink
+            <router-link
               class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gray-100 text-sm text-neutral-700 rounded-lg hover:bg-gray-100"
               to="/">
               <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -44,7 +44,20 @@
                 <polyline points="9 22 9 12 15 12 15 22" />
               </svg>
               Dashboard
-            </RouterLink>
+            </router-link>
+          </li>
+          <li>
+            <router-link
+              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gray-100 text-sm text-neutral-700 rounded-lg hover:bg-gray-100"
+              to="/about">
+              <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
+              about
+            </router-link>
           </li>
 
           <li class="hs-accordion" id="users-accordion">
@@ -98,17 +111,18 @@
                     class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden">
                     <ul class="pt-2 ps-2">
                       <li>
-                        <RouterLink
+                        <router-link
                           class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100"
-                          to="/about">
-                          Link 1
-                        </RouterLink>
+                          to="/">
+                          Home
+                        </router-link>
                       </li>
                       <li>
-                        <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100"
-                          href="#">
-                          Link 2
-                        </a>
+                        <router-link
+                          class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100"
+                          to="/about">
+                          About
+                        </router-link>
                       </li>
                       <li>
                         <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100"
