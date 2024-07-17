@@ -1,60 +1,97 @@
 <template>
-  <div>
-    <!-- ========== HEADER ========== -->
-    <HeadPage />
-    <!-- ========== END HEADER ========== -->
-
-    <!-- ========== MAIN CONTENT ========== -->
-    <!-- Breadcrumb -->
-    <div class="sticky top-0 inset-x-0 z-20 bg-white border-y px-4 sm:px-6 md:px-8 lg:hidden">
-      <div class="flex justify-between items-center py-2">
-        <!-- Breadcrumb -->
-        <ol class="ms-3 flex items-center whitespace-nowrap">
-          <li class="flex items-center text-sm text-gray-800">
-            Application Layout
-            <svg class="flex-shrink-0 mx-3 overflow-visible size-2.5 text-gray-400" width="16" height="16"
-              viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5 1L10.6869 7.16086C10.8637 7.35239 10.8637 7.64761 10.6869 7.83914L5 14" stroke="currentColor"
-                stroke-width="2" stroke-linecap="round" />
-            </svg>
+  <div class="flex inset-x-0">
+    <div class="w-72 h-screen border-r-2">
+      <div class="logo flex justify-center items-center">
+        <p class="text-2xl uppercase py-3 font-bold">Hairus</p>
+      </div>
+      <hr>
+      <div class="flex justify-center">
+        <ul class="menu rounded-box lg:w-56 lg:drawer-open ">
+          <li>
+            <a>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+              Dashboard
+            </a>
           </li>
-          <li class="text-sm font-semibold text-gray-800 truncate" aria-current="page">
-            Dashboard
+          <li>
+            <details open>
+              <summary>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="h-5 w-5">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                </svg>
+                Profile
+              </summary>
+              <ul>
+                <li class="active">
+                  <router-link to="/about">About</router-link>
+                </li>
+                <li>
+                  <router-link to="/">Home</router-link>
+                </li>
+              </ul>
+            </details>
           </li>
-        </ol>
-        <!-- End Breadcrumb -->
-
-        <!-- Sidebar -->
-        <button type="button"
-          class="py-2 px-3 flex justify-center items-center gap-x-1.5 text-xs rounded-lg border border-gray-200 text-gray-500 hover:text-gray-600"
-          data-hs-overlay="#application-sidebar" aria-controls="application-sidebar" aria-label="Sidebar">
-          <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M17 8L21 12L17 16M3 12H13M3 6H13M3 18H13" />
-          </svg>
-          <span class="sr-only">Sidebar</span>
-        </button>
-        <!-- End Sidebar -->
+          <li>
+            <details open>
+              <summary>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+                Profile
+              </summary>
+              <ul>
+                <li><a>Submenu 1</a></li>
+                <li><a>Submenu 2</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
       </div>
     </div>
-    <!-- End Breadcrumb -->
-
-    <!-- Sidebar -->
-    <SidebarPage />
-    <!-- End Sidebar -->
-
-    <!-- Content -->
-    <div class="w-full lg:ps-64">
-      <div class="p-4 sm:p-6 space-y-4 sm:space-y-6">
-        <RouterView />
+    <div class="container">
+      <!-- nabar -->
+      <div class="navbar bg-base-100 rounded-lg">
+        <div class="flex-1">
+          <a class="btn btn-ghost text-xl">X1901</a>
+        </div>
+        <div class="flex-none gap-2">
+          <div class="dropdown dropdown-end">
+            <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+              <div class="w-10 rounded-full">
+                <img alt="Tailwind CSS Navbar component"
+                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+              </div>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              <li>
+                <a class="justify-between">
+                  Profile
+                  <span class="badge">New</span>
+                </a>
+              </li>
+              <li><a>Settings</a></li>
+              <li><a>Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- end nabar -->
+      <div class="flex h-screen w-full bg-base-200">
+        <router-view class="mt-10" />
       </div>
     </div>
-    <!-- End Content -->
-    <!-- ========== END MAIN CONTENT ========== -->
   </div>
 </template>
 <script setup>
-import HeadPage from './components/HeadPage.vue';
-import SidebarPage from './components/SidebarPage.vue';
+import { ref } from 'vue';
+
+const open = ref(false);
 </script>

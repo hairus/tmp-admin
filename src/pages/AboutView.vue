@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="w-full h-full">
     <div class="card bg-base-100 shadow-xl w-full">
-      <div class="card-body">
+      <div class="card-body  rounded-lg">
         <div class="card-title mb-3">
           Data Table jquery and vue js
         </div>

@@ -5,7 +5,7 @@
             <nav class="flex basis-full items-center w-full mx-auto px-4 sm:px-6" aria-label="Global">
                 <div class="me-5 lg:me-0 lg:hidden">
                     <!-- Logo -->
-                    <a class="flex-none rounded-xl text-xl inline-block font-semibold focus:outline-none focus:opacity-80"
+                    <!-- <a class="flex-none rounded-xl text-xl inline-block font-semibold focus:outline-none focus:opacity-80"
                         href="../templates/admin/index.html" aria-label="Preline">
                         <svg class="w-28 h-auto" width="116" height="32" viewBox="0 0 116 32" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -20,7 +20,7 @@
                                 class="stroke-blue-600" stroke="currentColor" stroke-width="2" />
                             <circle cx="13" cy="16.5214" r="5" class="fill-blue-600" fill="currentColor" />
                         </svg>
-                    </a>
+                    </a> -->
                     <!-- End Logo -->
                 </div>
 

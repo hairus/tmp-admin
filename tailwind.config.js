@@ -2,9 +2,13 @@
 export default {
     content: [
         './index.html', './src/**/*.{vue,js,ts,jsx,tsx}',
-        'node_modules/preline/dist/*.js',
+        './node_modules/preline/preline.js',
     ],
     theme: {
+        // colors: {
+        //     'biru': '#4B49AC',
+        //     'blue-soft': '#98BDFF',
+        // },
         extend: {},
     },
     plugins: [
